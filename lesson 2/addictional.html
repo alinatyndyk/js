@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let friends = ["Ivan", "Slavik", "Grisha", "Lera", "Ira"];
+    if (friends.length === 3 || friends.length > 3){
+        console.log('too big')
+    } else {
+        console.log('too small')
+    }
+
+
+    let numbers = [3, 6, 8];
+    if (numbers[0] > numbers[1] || numbers[0] > numbers[2]) {
+        if (numbers[0] < numbers[1] || numbers[0] < numbers[2]) {
+            document.write('first')  // показує яке число є менше ніж одне та більше за інше
+        }
+        console.log('Wrong!')
+    } else if (numbers[1] > numbers[0] || number[1] > numbers[2]) {
+        if (numbers[1] < numbers[0] || numbers[1] < numbers[2]) {
+            document.write('second')
+        }
+        console.log('Right!')
+    } else if (numbers[2] > numbers[1] || number[2] > numbers[0]) {
+        if (numbers[2] < numbers[1] || numbers[2] < numbers[0]) {
+            document.write('third')
+        }
+        console.log('Wrong!')
+    }
+
+    let a = 2;
+    let b = 1;
+    let plus = a+b;
+    let result = plus <4 ? 'Malo' : plus ===4 ? 'Bahato' : 'Ne bahato';
+    console.log(result);
+
+</script>
+</body>
+</html>
