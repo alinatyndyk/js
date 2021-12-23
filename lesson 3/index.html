@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = [1,2,3,4,5];
+    console.log(numbers[1]);
+    console.log(numbers[2]);
+    console.log(numbers[3]);
+    console.log(numbers[4]);
+    console.log(numbers[5]);
+    let strings = ['a','b','c','d','e'];
+    console.log(strings[1]);
+    console.log(strings[2]);
+    console.log(strings[3]);
+    console.log(strings[4]);
+    console.log(strings[5]);
+
+
+
+    let sec = [];
+    sec[0]= 23;
+    sec[1]='hello';
+    sec[2]='2+2=4';
+    sec[3]= 34554;
+    sec[4]= 'world';
+    sec[5] = 'js';
+
+
+
+
+    for ( let i = 0; i <=10; i++){
+        document.write(`<div>`);
+        document.write('hello');
+        document.write(`</div>`);
+    }
+
+
+
+
+    for ( let i=0; i <10; i++){
+        document.write(`<div>`);
+        document.write('day'+ i);
+        document.write(`</div>`);
+    }
+
+
+    let i =0;
+    while (i<20) {
+        document.write(`java`);
+        i++;
+    }
+
+
+
+    let i =0;
+    while (i<20){
+        document.write(`<h1>Java ${i}</h1>`);
+        i++;
+    }
+
+
+      let nums = [1,2,3,4,5,6,7,8,9,10];
+    for ( const num of nums){
+        console.log(num);
+    }
+
+    let i =0; // 2 вариант
+    while (i<nums.length){
+        console.log(nums[i]);
+        i++;
+    }
+
+
+    let str = ['a','b','c','d','e','a','b','c','d','e'];
+    for (const st of str){
+        console.log(st)
+    }
+
+
+    let i =0;
+    while (i<str.length){
+        console.log(str[i]);
+        i++;
+      }
+
+
+    let all = [1 , 2 , false , 'afaffa', 3, true, 4 , 'tdhesg', 9, false];
+     for (let i = 0; i < all.length; i++) {
+         const allElement = all[i];
+         if (typeof allElement === 'boolean'){
+             console.log(allElement);
+         }
+
+     }
+
+
+    let all = [1 , 2 , false , 'afaffa', 3, true, 4 , 'tdhesg', 9, false];
+    for (let i = 0; i < all.length; i++) {
+        const allElement = all[i];
+        if (typeof allElement === 'number'){
+            console.log(allElement);
+        }
+
+    }
+
+
+    let all = [1 , 2 , false , 'afaffa', 3, true, 4 , 'tdhesg', 9, false];
+    for (let i = 0; i < all.length; i++) {
+        const allElement = all[i];
+        if (typeof allElement === 'string'){
+            console.log(allElement);
+        }
+
+    }
+
+
+    let mix = [];
+    mix[0] = 'a';
+    mix[1] = 'asd';
+    mix[2] = 7;
+    mix[3] = 5;
+    mix[4] = true;
+    mix[5] = false;
+    mix[6] = 13;
+    mix[7] = false;
+    mix[8] = 'b';
+    mix[9] = 'zkryjf';
+    for (const m of mix){
+        console.log(m);
+    }
+
+
+    for (let i = 0; i < 10; i++) {
+        console.log(i);
+
+    }
+
+    for (let i = 0; i < 10; i++) {
+        document.write(i);
+    }
+
+
+
+    for (let i =0; i < 100; i++){
+        console.log(i);
+    }
+
+    for (let i=0; i<100; i++){
+        document.write(i);
+    }
+
+
+    for (let i =0; i < 100; i=i+2){
+        console.log(i);
+    }
+
+    for (let i=0; i<100; i=i+2){
+        document.write(i);
+    }
+
+
+
+    for ( let i=0; i<100; i++){
+        if (i%2===0 && i !==0){
+            console.log(i);
+            document.write(i);
+        }
+    }
+
+
+    // for ( let i=0; i<100; i++){
+    //     if (i%2!==0 && i !==0){
+    //         console.log(i);
+    //         document.write(i);
+    //     }
+    // }
+
+</script>
+</body>
+</html>
