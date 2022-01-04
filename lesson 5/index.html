@@ -8,33 +8,49 @@
 <script>
 
 
-    //1
+    //1 - створити функцію яка обчислює та повертає площу прямокутника висотою
+    // let sq = (w,h) => w*h;
+    // console.log(sq(6,10));
 
 
-    //2
+    //2створити функцію яка обчислює та повертає площу кола
     //Площа круга – S = πr2, де π = 3,14, r – радіус круга
     //     let cr = (r,p) => p*r*r;
     //     console.log(cr(10,3.14));
 
-    //3
+    //3 - створити функцію яка обчислює та повертає площу циліндру
     //формула площади всей поверхности цилиндра - S = 2nr(h+r)
     // let cil = (r, h, p) => 2 * p * r * (h + r);
     // console.log(cil(5, 10, 3.14));
 
 
-    //4
+    //4 - створити функцію яка приймає масив та виводить кожен його елемент
+    // let returnM = (...xxx) => {
+    //     console.log(xxx);
+    // }
+    // returnM(1,5,7890,'hfgfhgf',true,false,'age');
+
+    //5- створити функцію яка  створює параграф з текстом. Текст задати через аргумент
+    // let text = (word) => {
+    //     word();
+    // }
+    // text(function (){
+    //     console.log('jcgm,ccgckgjc ');
+    // });
 
 
+    //6- створити функцію яка  створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
+    // let list=(text)=> {
+    //     document.write(`<ul>`);
+    //     document.write(`<li>${text}</li>`);
+    //     document.write(`<li>${text}</li>`);
+    //     document.write(`<li>${text}</li>`);
+    //     document.write(`</ul>`);
+    // }
+    // list('hello');
 
-    //5
-    text = () => console.log('створити функцію яка  створює параграф з текстом.');
-    text();
 
-
-    //6
-
-
-    //7
+    //7 - створити функцію яка  створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
     // function list (i,limit,text){
     //     i++;
     //         document.write(`<ul>`);
@@ -48,7 +64,31 @@
     // list(0,2,'hello');
 
 
-    //8
+    //8- створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
+
+
+    //9 - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
+    let newArray = [
+        {name: 'vasya', age: 31, id: 3},
+        {name: 'petya', age: 30, id: 4},
+        {name: 'kolya', age: 29, id: 5},
+        {name: 'olya', age: 28, id: 7},
+        {name: 'max', age: 30, id: 3},
+        {name: 'anya', age: 31, id: 9},
+        {name: 'oleg', age: 28, id: 5},
+        {name: 'andrey', age: 29, id: 3},
+        {name: 'masha', age: 30, id: 7},
+        {name: 'olya', age: 31, id: 3},
+        {name: 'max', age: 31, id: 6}
+    ];
+
+    function objArray(array) {
+        for (const arrayElement of array) {
+            document.write(`<div>${arrayElement.id}.${arrayElement.name}-${arrayElement.age}</div>`);
+        }
+    }
+
+    objArray(newArray);
 
 
 </script>
