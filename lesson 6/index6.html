@@ -53,13 +53,14 @@
 
     //6
     let str1 = 'Каждый охотник желает знать';
-    let substring = str1.substr(0,7);
+    let substring = str1.substr(0, 7);
     console.log(substring);
 
-     str = 'Каждый охотник желает знать';
+    str = 'Каждый охотник желает знать';
+
     function delete_characters(str, length) {
 
-        if ((str.constructor === String) && (length>0)) {
+        if ((str.constructor === String) && (length > 0)) {
             return str.slice(0, length);
         }
     }
@@ -69,18 +70,21 @@
 
     //7
     str = 'HTML JavaScript PHP';
-    function insert_dash (str){
-        return str.trim().toUpperCase().replaceAll(' ','-')
-    }
-    document.write(insert_dash(str));
 
+    function insert_dash(str) {
+        return str.trim().toUpperCase().replaceAll(' ', '-')
+    }
+
+    document.write(insert_dash(str));
 
 
     //8
     str = 'string starting with capital';
-    function upperFirst (str){
-     return str.charAt(0).toUpperCase()+ str.slice(1);
+
+    function upperFirst(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
     }
+
     document.write(upperFirst(str));
 
 
@@ -89,21 +93,13 @@
 
     function capitalize(str) {
 
-        return str.replace(/(^|\s)\S/g, function(a) {return a.toUpperCase()})
+        return str.replace(/(^|\s)\S/g, function (a) {
+            return a.toUpperCase()
+        })
 
     }
 
     document.writeln(capitalize(str));
-
-
-
-
-
-
-
-
-
-
 
 
 </script>
