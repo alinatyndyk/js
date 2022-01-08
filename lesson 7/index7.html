@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    //1
+     function User(id, name, surname, email, phone) {
+         this.id = id;
+         this.name = name;
+         this.surname = surname;
+         this.email = email;
+         this.phone = phone;
+     }
+     userArr = [
+         new User (7,'Oleg','Simj','asd@gmail.com','0935846397'),
+         new User (3,'Oleg','Simj','asd@gmail.com','0935846397'),
+         new User (5,'Oleg','Simj','asd@gmail.com','0935846397'),
+         new User (8,'Oleg','Simj','asd@gmail.com','0935846397'),
+         new User (9,'Oleg','Simj','asd@gmail.com','0935846397'),
+         new User (6,'Oleg','Simj','asd@gmail.com','0935846397'),
+         new User (1,'Oleg','Simj','asd@gmail.com','0935846397'),
+         new User (2,'Oleg','Simj','asd@gmail.com','0935846397'),
+         new User (4,'Oleg','Simj','asd@gmail.com','0935846397'),
+         new User (6,'Oleg','Simj','asd@gmail.com','0935846397')
+     ]
+    console.log(userArr);
+
+    //2
+     let filterUser = userArr.filter((value) => {
+        if (value.id%2 === 0){
+            return true
+        }
+    });
+    console.log(filterUser);
+
+
+     //3
+    console.log(userArr.sort((a, b) => a.id - b.id));
+
+    //4
+    class Client {
+        constructor(id,name,username,email,phone,order) {
+            this.id = id;
+            this.name = name;
+            this.username = username;
+            this.email = email;
+            this.phone = phone;
+            this.order = order;
+        }
+    }
+
+    clientArr = [
+        new Client(1,'Max','Buk', 'asd@gmail.com', 3638495732, ['Phone']),
+        new Client(2,'Max','Buk', 'asd@gmail.com', 3638495732 , ['Phone','Laptop','Tv','Headphones']),
+        new Client(3,'Max','Buk', 'asd@gmail.com', 3638495732 , ['Phone','Laptop','Tv','Ipad','Headphones']),
+        new Client(4,'Max','Buk', 'asd@gmail.com', 3638495732 , ['Phone','Ipad','Headphones']),
+        new Client(5,'Max','Buk', 'asd@gmail.com', 3638495732 , ['Phone','Laptop','Tv','Ipad']),
+        new Client(6,'Max','Buk', 'asd@gmail.com', 3638495732, ['Phone']),
+        new Client(7,'Max','Buk', 'asd@gmail.com', 3638495732 , ['Phone','Laptop','Tv','Headphones']),
+        new Client(8,'Max','Buk', 'asd@gmail.com', 3638495732 , ['Phone','Laptop','Tv','Ipad','Headphones']),
+        new Client(9,'Max','Buk', 'asd@gmail.com', 3638495732 , ['Phone','Headphones']),
+        new Client(10,'Max','Buk', 'asd@gmail.com', 3638495732 , ['Phone','Laptop','Tv','Ipad']),
+    ];
+    console.log(clientArr);
+
+    //5
+    console.log(clientArr.sort((a, b) => a.order.length - b.order.length));
+
+
+
+
+
+</script>
+</body>
+</html>
