@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .menu {
+        background-color: cornflowerblue;
+        border-radius: 5px;
+        color: white;
+    }
+    .close {
+        display: none;
+    }
+</style>
+<body>
+<div id="text">Some text!</div>
+<button id="btn">Disappear</button>
+
+<button id="btn1">Click me</button>
+
+
+<!--<input type="text" id="age">-->
+<!--<input type="button" id="button" value="Check">-->
+
+<ul class="menu">
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+</ul>
+
+<script>
+    //1
+    //let btn = document.getElementById('btn');
+    // btn.onclick = function (){
+    //document.getElementById('text').hidden=true;
+    //}
+
+    //2
+    //let btn1 = document.getElementById('btn1');
+    //btn1.onclick = function (){
+    //document.getElementById('btn1').hidden=true;
+    //}
+
+
+    //3
+    // let btn = document.getElementById('button');
+    // let age = document.getElementById('age');
+    // btn.onclick = function xxx (){
+    //      if (!age.value){
+    //         alert('Enter your age.');
+    //     } else if (age.value<18){
+    //         alert('You are not old enough.');
+    //     } else if (age.value>18) {
+    //         alert('Welcome to our website!');
+    //     }
+    // }
+
+    //4
+    let menu = document.getElementsByClassName('menu')[0];
+    menu.onclick = function () {
+        menu.hidden = true;
+    }
+
+
+    //5
+    let comments = [
+        {name: 'Максим', body: 'Вчи English'},
+        {name: 'Іван', body: 'Досить сидіти, вже пізно'},
+        {name: 'Льоня', body: 'Зупка, стине, ходи додому'},
+        {name: 'Іра', body: 'Воно, тобі треба?'},
+    ];
+
+    let divMain = document.createElement('div');
+    for (const item of comments) {
+        let div = document.createElement('div');
+        let h3 = document.createElement('h3');
+        let p = document.createElement('p');
+        let btn = document.createElement('button');
+
+        h3.innerText = item.name;
+        p.innerHTML = item.body;
+        btn.innerHTML = 'Close'
+
+        btn.onclick = () => {
+            p.classList.add('close');
+        }
+        div.append(h3, p, btn);
+        divMain.append(div);
+    }
+    document.body.appendChild(divMain)
+
+</script>
+</body>
+</html>
