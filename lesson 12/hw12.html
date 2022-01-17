@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    * {
+        font-size: xx-small;
+    }
+
+    .color {
+        border: solid 2px cornflowerblue;
+        border-radius: 10px;
+        padding: 20px;
+        box-sizing: border-box;
+        margin-bottom: 40px;
+    }
+
+</style>
+<body>
+<div class="posts"></div>
+<div class="comments"></div>
+<script>
+    //1
+    // fetch('https:jsonplaceholder.typicode.com/posts')
+    //     .then(value => value.json())
+    //     .then(value => {
+    //         for (const postItem of value) {
+    //             let cont = document.getElementsByClassName('posts');
+    //             cont = document.createElement('div');
+    //             cont.classList.add('color');
+    //             let useridCont = document.createElement('div');
+    //             useridCont.innerText = `${postItem.userId}`;
+    //             let idCont = document.createElement('div');
+    //             idCont.innerText = `${postItem.id}`
+    //             let title = document.createElement('h2');
+    //             title.innerText = `${postItem.title}`
+    //             let body = document.createElement('div');
+    //             body.innerText = `${postItem.body}`;
+    //
+    //             cont.append(useridCont,idCont,title,body);
+    //             document.body.appendChild(cont);
+    //
+    //         }
+    //     })
+
+    //2
+    fetch('https://jsonplaceholder.typicode.com/comments')
+        .then(value => value.json())
+        .then(value => {
+            for (const comm of value) {
+                let commBody = document.getElementsByClassName('comments');
+                commBody = document.createElement('div');
+                commBody.classList.add('color')
+                let postId = document.createElement('div');
+                postId.innerText = `${comm.postId}`;
+                let id = document.createElement('div');
+                id.innerText = `${comm.id}`;
+                let name = document.createElement('div');
+                name.innerText = `${comm.name}`;
+                let email = document.createElement('div');
+                email.innerText = `${comm.email}`;
+                let body = document.createElement('div');
+                body.innerText = `${comm.body}`;
+                let button = document.createElement('button');
+                button.innerText = 'open';
+                button.onclick = function () {
+                    fetch(`https://jsonplaceholder.typicode.com/posts/${comm.id}/comments`)
+                        .then(value => value.json())
+                        .then(value => {
+                            let commentsDiv = document.createElement('div');
+                            for (const commentItem of value) {
+                                let comment = document.createElement('div');
+                                comment.innerText=commentItem.body
+                                commentsDiv.appendChild(comment);
+                            }
+                            commBody.appendChild(commentsDiv);
+                        })
+                }
+                commBody.append(postId, id, name, email,body,button);
+                document.body.appendChild(commBody);
+            }
+        })
+
+</script>
+</body>
+</html>
