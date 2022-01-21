@@ -72,13 +72,13 @@
                             let commentsDiv = document.createElement('div');
                             for (const commentItem of value) {
                                 let comment = document.createElement('div');
-                                comment.innerText=commentItem.body
+                                comment.innerText = commentItem.body
                                 commentsDiv.appendChild(comment);
                             }
                             commBody.appendChild(commentsDiv);
                         })
                 }
-                commBody.append(postId, id, name, email,body,button);
+                commBody.append(postId, id, name, email, body, button);
                 document.body.appendChild(commBody);
             }
         })
